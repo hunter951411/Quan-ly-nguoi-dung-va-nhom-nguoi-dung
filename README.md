@@ -15,8 +15,39 @@ Quản lý người dùng và nhóm người dùng
 
 - Đăng nhập bằng root 
 
-<http://prntscr.com/8mtjaf>
+<img src="http://i.imgur.com/Ln8qfTp.png">
 
 - Đăng nhập bằng người dùng thường
 
-<http://prntscr.com/8mtjaf>
+<img src="http://i.imgur.com/Ln8qfTp.png">
+
+Bạn chú ý dấu $ cho thấy ban đang kết nối như người dử dụng thường (ubuntuserver). Dấu 3 cho thấy bạn đang thực hiện lệnh với root.
+
+##2. Thông tin của user
+
+Mọi người muốn đăng nhập và sử dụng hệ thống linux đều cần có một tài khaorn việc tạo và quản lý tài khoản là vấn đề quan trọng mà người quản trị phải thực hiện.
+
+Mỗi tài khoản người dùng phải có một tên sử dụng (username) và mật khẩu (password) riêng. Tập tin /etc/passwd là tập tin chứa thông tin về tài khoản người dùng của hệ thống.
+
+###2.1 Tập tin /etc/
+
+- Tập tin /etc/passwd đóng vai trò sống còn đối với một hệ thống Linux. Mọi người đều có thể đọc tập tin này nhưng chỉ có root mới có quyền thay đổi. Tập tin /etc/passwd được lưu dưới dạng văn bản như hầu hết các tập tin khác của linux.
+
+- Để xem thông tin gói tin bạn thực hiện lệnh sau:
+
+<img src="http://i.imgur.com/9RwR2Kj.png">
+
+- Nội dung của tập tin:
+
+<img src="http://i.imgur.com/D9XuMGb.png">
+
+- Mỗi tài khoản được lưu trong một dòng gồm 7 cột, mỗi cột được ngăn cách bởi dấu ":" 
+<ul>
+<li>Cột 1: Username: Tên của người dùng.</li>
+<li>Cột 2: Password: Mã liên quan đến mật khẩu tài khoản là "x" đối với Linux. Linux lưu mã này trong một tập tin là /etc/shadow mà chỉ có root mới có quyền đọc.</li>
+<li>Cột 3: User ID: Mã định danh tài khoản. Hệ thống sử dụng UID để phân biệt người này với người khác.</li>
+<li>Cột 4: Group ID: Mã định danh nhóm. đây là primary group của user này.</li>
+<li>Cột 5: Comment: Mô tả về tài khoản.</li>
+<li>Cột 6: Home Directery: Thư mục home của từng user, thường sẽ nằm trong /home/tên_tài_khoản.</li>
+<li>Cột 7: Shell: Tên chương trình thực thi ngay sau khi đăng nhập. Nếu không có shell sẽ không thể đăng nhập.Mặc định trên Linux dùng bash shell.</li>
+</ul>
