@@ -263,3 +263,6 @@ Ta có thể xem tên nhóm của một tài khoản nào đó ta dùng lệnh:
 **#groups user1**
 
 <img src="http://i.imgur.com/Ie4pJe2.png">
+
+
+**Nguồn: Internet**
