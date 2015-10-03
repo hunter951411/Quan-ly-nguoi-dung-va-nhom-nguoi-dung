@@ -162,6 +162,7 @@ UserID của người dùng đã được đổi thành 1007
 **-c**: Mô tả(tên đầy đủ)
 
 <img src="http://prntscr.com/8n4sxs">
+
 <img src="http://prntscr.com/8n4t54">
 
 Mô tả đã được đặt thành "Nguoi dung 1"
@@ -193,3 +194,72 @@ Tuy nhiên nếu xóa thế này thì sẽ vẫn giữ lại thư mục home c�
 
 **userdel** -r user1
 
+#4 Nhóm người dùng
+
+- Thiết lập những người dùng có chung một số đặc điểm nào đó hay có chung quyền hạn trên tài nguyên vào chung một nhóm. Mỗi nhóm có một tên riêng và một định danh nhóm, một nhóm có thể có nhiều người dùng và người dùng có thể là thành viên của nhiều nhóm khác nhau.
+
+- Thông tin về nhóm lưu tại tập tin /etc/group. Mỗi dòng định nghĩa một nhóm, các trường trên dòng cách nhau bằng dấu “:” và dấu “,” ngăn cách danh sách các thành viên.
+
+**[tên_nhóm]:[password_của_nhóm]:[định_danh_nhóm]:[các_user_thuộc_nhóm]**
+
+- Mặc định khi tạo tài khoản, Linux sẽ tạo cho mỗi tài khoản một nhóm, tên nhóm trùng với tên tài khoản. Đọc tập tin /etc/passwd ta thấy:
+
+<img src="http://prntscr.com/8n5cw6">
+
+##4.1 Tạo nhóm
+
+Chúng ta có thể chỉnh sửa trực tiếp trong tập tin /etc/group hoặc dùng lệnh groupadd. Cú pháp:
+
+**#groupadd tên_nhóm**
+
+##4.2 Thêm người dùng vào nhóm
+
+- Chúng ta có thể sửa từ tập tin /etc/group. Một cách khác là cho từng người dùng vào nhóm lệnh:
+
+**#usermod -G tên_nhóm tên_tài_khoản**
+
+usermod -G user user1
+
+usermod -G user user2
+
+Sau đó gõ lệnh cat /etc/group | grep “user” để kiểm tra:
+
+<img src="http://prntscr.com/8n5e6n">
+
+##4.3 Thay đổi thông tin nhóm
+
+Để thay đổi thông tin nhóm ta dùng lệnh:
+
+groupmod tùy_chọn tên_nhóm
+
+Ví dụ: Đổi tên nhóm user thành usergroup:
+
+**#groupmod -n groupuser user**
+
+<img src="http://prntscr.com/8n5erc">
+
+##4.4 Hủy nhóm
+
+Ta có thể xóa trực tiếp trong tập tin /etc/group hay dùng lệnh:
+
+**groupdel tên_nhóm**
+
+##4.5 Xem thông tin về user và group
+
+Ta có thể dùng lệnh groups hoặc id để xem thông tin về một tài khoản hay một nhóm nào đó trong hệ thống, cú pháp lệnh:
+
+**id tùy_chọn tên_tài_khoản**
+
+Ví dụ: Ta muốn xem groupID của một tài khoản user1 ta dùng lệnh:
+
+**#id -g user1**
+
+<img src="http://prntscr.com/8n5fs4">
+
+Ta có thể xem tên nhóm của một tài khoản nào đó ta dùng lệnh:
+
+**groups tên_tài_khoản**
+
+**#groups user1**
+
+<img src="http://prntscr.com/8n5g4h">
