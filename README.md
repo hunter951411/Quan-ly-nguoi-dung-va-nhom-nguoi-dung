@@ -59,8 +59,51 @@ Mỗi tài khoản người dùng phải có một tên sử dụng (username) v
 
 - Là chuỗi các kí tự xác định duy nhất cho một người dùng, dùng tên này để đăng nhập cũng như truy xuất tài khoản. Trong Linux phân biệt chữ hoa và chữ thường. Thông thường, Tên người dùng thường dùng chữ thường.
 
-##2.3 User ID
+##2.3 Password
+ 
+- Mỗi người dùng có một mật khẩu riêng để đăng nhập bằng username của mình. Mọi người đều có quyền đổi mật khẩu của chính mình. Người quản trị có thể đổi mật khẩu của nhữn người khác.
+
+- Tập tin **/etc/shadow**: chứa chuỗi Password đã mã bóa của tất cả người dùng.
+
+- Xem thông tin gói tin /etc/shadow:
+
+<img src="http://i.imgur.com/feEF9zg.png">
+
+- Nội dung gói tin /etc/shadow:
+
+<img src="http://i.imgur.com/CEpAl73.png">
+
+- Các dòng tương ứng với mỗi tài khoản, các cột cách nhau bởi dấu ":"
+<ul>
+<li>Cột 1: Tên của tài khoản.</li>
+<li>Cột 2: Mật khẩu của tài khoản được mã hóa. Trong trường hợp tài khoản nào có mật khẩu là ! tức là tài khoản đang tạm thời bị khó, * là tài khoản bị disable.</li>
+<li>Cột 3: Số ngày kể từ khi mật khẩu được thay đổi cuối cùng(Mặc định chưa thay mật khẩu 1-1-1970)</li>
+<li>Cột 4: Số ngày tối thiểu để có thể thay được mật khẩu.</li>
+<li>Cột 5: Số ngày mật khẩu hết hạn.</li>
+<li>Cột 6: Số ngày cảnh báo ngời dùng phải thay đổi mật khẩu trước khi hết hạn.</li>
+<li>Cột 7: Số ngày sau khi mật khẩu hết hạn, thì tài khoản bị disable.</li>
+<li>Cột 8: Số ngày ể từ ngày 1-1-1970 tài khoản bị vô hiệu hóa.</li>
+<li>Cột 9: Một lĩnh vực riêng dùng trong tương lai.</li>
+</ul>
+
+- Ký tự $ trước mật khẩu đã được mã hóa của người dùng cho biết mật khẩu này được tạo sử dụng một thuật toán mã hóa:
+<ul>
+<li>$1$ MD5</li>
+<li>$5$ SHA 256</li>
+<li>$6$ SHA 512</li>
+</ul>
+
+##2.4 User ID
 
 - Để dễ dàng hơn trong việc quản lý người dùng, ngoài tên người dùng Linux còn sử dụng khái niệm định danh người dùng (User ID). Mỗi người có 1 con số định danh riêng. Theo quy ước, những người dùng có định danh là 0 là người dùng quản trị (root). Các User ID từ 1 - 99 sử dụng cho các tài khoản hệ thống, User ID của nguwofi dùng thường sử dụng giá trị bắt đầu từ 100.
 
+##2.5 Group ID
 
+- Định danh cho nhóm người dùng. Thông qau Group ID cso thể xác định người dùng đó thuộc nhóm nào, thông thường trên Linux, Group ID được đặt mặc định khi tạo ra một tài khoản và có giá trị >=500.
+
+##2.6 Home Directory
+
+- Khi người dùng login vào hệ thống được đặt làm việc tại thư mục cá nhân của mình. Thường khi mỗi người có một thư mục cá nhân riêng, người dùng có toàn quyền trên đó, nó dùng để chứa dữ liệu các nhân, các thông tin hệ thống cho hoạt động của người dùng như biến môi trường, script khởi động....... Home Directory của người dùng thường là /home, của root là /root. Tuy nhiên ta cũng có thể sửa lại bằng lệnh useradd hoặc user mode.
+
+
+#3 Quản lý người dùng
