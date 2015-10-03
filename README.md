@@ -107,3 +107,10 @@ Mỗi tài khoản người dùng phải có một tên sử dụng (username) v
 
 
 #3 Quản lý người dùng
+
+##3.1 Tạo tài khoản.
+
+- Để tạo tài khoản bạn có thể sử dụng lệnh user add, có pháp lệnh như sau:
+
+#**useradd** [tùy_chọn] tên_tài_khoản
+
