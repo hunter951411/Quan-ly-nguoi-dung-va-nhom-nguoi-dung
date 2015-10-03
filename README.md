@@ -51,3 +51,16 @@ Mỗi tài khoản người dùng phải có một tên sử dụng (username) v
 <li>Cột 6: Home Directery: Thư mục home của từng user, thường sẽ nằm trong /home/tên_tài_khoản.</li>
 <li>Cột 7: Shell: Tên chương trình thực thi ngay sau khi đăng nhập. Nếu không có shell sẽ không thể đăng nhập.Mặc định trên Linux dùng bash shell.</li>
 </ul>
+
+- Dòng đầu tiên của /etc/passwd mô tả thông tin cho user root( tất cả những tài khoản có User ID = 0 đều là root), Tieespp theo là các tải khoản khác của hệ thống, cuối cùng là các tài khoản của người dùng.
+
+
+##2.2 Username
+
+- Là chuỗi các kí tự xác định duy nhất cho một người dùng, dùng tên này để đăng nhập cũng như truy xuất tài khoản. Trong Linux phân biệt chữ hoa và chữ thường. Thông thường, Tên người dùng thường dùng chữ thường.
+
+##2.3 User ID
+
+- Để dễ dàng hơn trong việc quản lý người dùng, ngoài tên người dùng Linux còn sử dụng khái niệm định danh người dùng (User ID). Mỗi người có 1 con số định danh riêng. Theo quy ước, những người dùng có định danh là 0 là người dùng quản trị (root). Các User ID từ 1 - 99 sử dụng cho các tài khoản hệ thống, User ID của nguwofi dùng thường sử dụng giá trị bắt đầu từ 100.
+
+
