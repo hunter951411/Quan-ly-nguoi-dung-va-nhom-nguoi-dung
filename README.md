@@ -145,7 +145,7 @@ Option:
 
 **-d**: Thiết lập thư mục home của người dùng. Mặc định khi ta tạo một người dùng thì sẽ được tạo thư mục **/home/ten_tai_khoan**
 
-<img src="http://prntscr.com/8n4rd9">
+<img src="http://i.imgur.com/pT4Hyjg.png">
 
 <img src="http://i.imgur.com/Tj08VmR.png">
 
