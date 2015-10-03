@@ -147,23 +147,23 @@ Option:
 
 <img src="http://prntscr.com/8n4rd9">
 
-<img src="http://prntscr.com/8n4rhy">
+<img src="http://i.imgur.com/Tj08VmR.png">
 
 Thư mục /home/user1 mặc định đã được đổi thành /home/thumucuser1
 
 **-u**: Chọn số User ID cho user
 
-<img src="http://prntscr.com/8n4sf0">
+<img src="http://i.imgur.com/yaeFYMO.png">
 
-<img src="http://prntscr.com/8n4sjd">
+<img src="http://i.imgur.com/9TibHCN.png">
 
 UserID của người dùng đã được đổi thành 1007
 
 **-c**: Mô tả(tên đầy đủ)
 
-<img src="http://prntscr.com/8n4sxs">
+<img src="http://i.imgur.com/QAfXZBR.png">
 
-<img src="http://prntscr.com/8n4t54">
+<img src="http://i.imgur.com/Ick7EII.png">
 
 Mô tả đã được đặt thành "Nguoi dung 1"
 
@@ -204,7 +204,7 @@ Tuy nhiên nếu xóa thế này thì sẽ vẫn giữ lại thư mục home c�
 
 - Mặc định khi tạo tài khoản, Linux sẽ tạo cho mỗi tài khoản một nhóm, tên nhóm trùng với tên tài khoản. Đọc tập tin /etc/passwd ta thấy:
 
-<img src="http://prntscr.com/8n5cw6">
+<img src="http://i.imgur.com/ui7f0k4.png">
 
 ##4.1 Tạo nhóm
 
@@ -224,7 +224,7 @@ usermod -G user user2
 
 Sau đó gõ lệnh cat /etc/group | grep “user” để kiểm tra:
 
-<img src="http://prntscr.com/8n5e6n">
+<img src="http://i.imgur.com/fXlB36X.png">
 
 ##4.3 Thay đổi thông tin nhóm
 
@@ -236,7 +236,7 @@ Ví dụ: Đổi tên nhóm user thành usergroup:
 
 **#groupmod -n groupuser user**
 
-<img src="http://prntscr.com/8n5erc">
+<img src="http://i.imgur.com/6RqmgUq.png">
 
 ##4.4 Hủy nhóm
 
@@ -254,7 +254,7 @@ Ví dụ: Ta muốn xem groupID của một tài khoản user1 ta dùng lệnh:
 
 **#id -g user1**
 
-<img src="http://prntscr.com/8n5fs4">
+<img src="http://i.imgur.com/deDbqWC.png">
 
 Ta có thể xem tên nhóm của một tài khoản nào đó ta dùng lệnh:
 
@@ -262,4 +262,4 @@ Ta có thể xem tên nhóm của một tài khoản nào đó ta dùng lệnh:
 
 **#groups user1**
 
-<img src="http://prntscr.com/8n5g4h">
+<img src="http://i.imgur.com/Ie4pJe2.png">
