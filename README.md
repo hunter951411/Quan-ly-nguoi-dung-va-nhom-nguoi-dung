@@ -122,26 +122,6 @@ Kiểm tra tài khoản đã được tạo ra trong thư mục /etc/passwd
 
 <img src="http://i.imgur.com/Vy0HtzT.png">
 
-Option:
-
-**-d**: Thiết lập thư mục home của người dùng. Mặc định khi ta tạo một người dùng thì sẽ được tạo thư mục **/home/ten_tai_khoan**
-
-**-m**: Tạo thư mục home của người dùng nếu không có
-
-**-M**: không tạo thư mục home của người dùng
-
-**-u**: Mặc định lấy số ID tiếp theo để gán cho user(User ID)
-
-***-G**: Thêm người dùng vào các group
-
-**-c**: Mô tả(tên đầy đủ)
-
-**-e**: Ngày hết hạn của tài khoản
-
-
-
-Và còn nhiều tùy chọn khác.
-
 - Dùng lệnh **passwd** để đặt password cho tài khoản
 
 **#passwd** tên_tài_khoản
@@ -153,3 +133,63 @@ Demo: Đặt password cho tài khoản user1
 Kiểm tra lại trong tập tin /etc/shadow
 
 <img src="http://i.imgur.com/vdtaUF6.png">
+
+
+##3.2 Thay đổi thông tin tài khoản
+
+Để thay đổi thông tin tài khoản bạn sử dụng câu lệnh **usermod**:
+
+**#usermod** [option] tên_tài_khoản
+
+Option:
+
+**-d**: Thiết lập thư mục home của người dùng. Mặc định khi ta tạo một người dùng thì sẽ được tạo thư mục **/home/ten_tai_khoan**
+
+<img src="http://prntscr.com/8n4rd9">
+
+<img src="http://prntscr.com/8n4rhy">
+
+Thư mục /home/user1 mặc định đã được đổi thành /home/thumucuser1
+
+**-u**: Chọn số User ID cho user
+
+<img src="http://prntscr.com/8n4sf0">
+
+<img src="http://prntscr.com/8n4sjd">
+
+UserID của người dùng đã được đổi thành 1007
+
+**-c**: Mô tả(tên đầy đủ)
+
+<img src="http://prntscr.com/8n4sxs">
+<img src="http://prntscr.com/8n4t54">
+
+Mô tả đã được đặt thành "Nguoi dung 1"
+
+
+Và còn nhiều tùy chọn khác. Các bạn dùng lệnh man để tìm hiểu dần dần tùy vào mục đích sử dụng.
+
+##3.3 Khóa tài khoản người dùng
+
+Để kháo tài khoản ta dùng lệnh:
+
+passwd -l tên_tài_khoản
+
+hoặc usermod -L tên_tài_khoản
+
+Để mở khóa ta dùng lệnh:
+
+passwd -u tên_tài_khoản
+
+hoặc usermod -U tên_tài_khoản
+
+##3.4 Xóa tài khoản
+
+Ta dùng lệnh userdel để xóa tài khoản
+
+**#userdel** user1
+
+Tuy nhiên nếu xóa thế này thì sẽ vẫn giữ lại thư mục home của tài khoản, vì vậy bạn phải dùng lệnh:
+
+**userdel** -r user1
+
