@@ -112,5 +112,44 @@ Mỗi tài khoản người dùng phải có một tên sử dụng (username) v
 
 - Để tạo tài khoản bạn có thể sử dụng lệnh user add, có pháp lệnh như sau:
 
-#**useradd** [tùy_chọn] tên_tài_khoản
+**#useradd** [tùy_chọn] tên_tài_khoản
 
+Demo: Tạo tài khoản user1:
+
+<img src="http://i.imgur.com/b1pjlhp.png">
+
+Kiểm tra tài khoản đã được tạo ra trong thư mục /etc/passwd
+
+<img src="http://i.imgur.com/Vy0HtzT.png">
+
+Option:
+
+**-d**: Thiết lập thư mục home của người dùng. Mặc định khi ta tạo một người dùng thì sẽ được tạo thư mục **/home/ten_tai_khoan**
+
+**-m**: Tạo thư mục home của người dùng nếu không có
+
+**-M**: không tạo thư mục home của người dùng
+
+**-u**: Mặc định lấy số ID tiếp theo để gán cho user(User ID)
+
+***-G**: Thêm người dùng vào các group
+
+**-c**: Mô tả(tên đầy đủ)
+
+**-e**: Ngày hết hạn của tài khoản
+
+
+
+Và còn nhiều tùy chọn khác.
+
+- Dùng lệnh **passwd** để đặt password cho tài khoản
+
+**#passwd** tên_tài_khoản
+
+Demo: Đặt password cho tài khoản user1
+
+<img src="http://i.imgur.com/v6Yiqpr.png">
+
+Kiểm tra lại trong tập tin /etc/shadow
+
+<img src="http://i.imgur.com/vdtaUF6.png">
