@@ -43,13 +43,13 @@ Mỗi tài khoản người dùng phải có một tên sử dụng (username) v
 
 - Mỗi tài khoản được lưu trong một dòng gồm 7 cột, mỗi cột được ngăn cách bởi dấu ":" 
 <ul>
-<li>Cột 1: Username: Tên của người dùng.</li>
-<li>Cột 2: Password: Mã liên quan đến mật khẩu tài khoản là "x" đối với Linux. Linux lưu mã này trong một tập tin là /etc/shadow mà chỉ có root mới có quyền đọc.</li>
-<li>Cột 3: User ID: Mã định danh tài khoản. Hệ thống sử dụng UID để phân biệt người này với người khác.</li>
-<li>Cột 4: Group ID: Mã định danh nhóm. đây là primary group của user này.</li>
-<li>Cột 5: Comment: Mô tả về tài khoản.</li>
-<li>Cột 6: Home Directery: Thư mục home của từng user, thường sẽ nằm trong /home/tên_tài_khoản.</li>
-<li>Cột 7: Shell: Tên chương trình thực thi ngay sau khi đăng nhập. Nếu không có shell sẽ không thể đăng nhập.Mặc định trên Linux dùng bash shell.</li>
+<li>Username: Tên của người dùng.</li>
+<li>Password: Mã liên quan đến mật khẩu tài khoản là "x" đối với Linux. Linux lưu mã này trong một tập tin là /etc/shadow mà chỉ có root mới có quyền đọc.</li>
+<li>User ID: Mã định danh tài khoản. Hệ thống sử dụng UID để phân biệt người này với người khác.</li>
+<li>Group ID: Mã định danh nhóm. đây là primary group của user này.</li>
+<li>Comment: Mô tả về tài khoản.</li>
+<li>Home Directery: Thư mục home của từng user, thường sẽ nằm trong /home/tên_tài_khoản.</li>
+<li>Shell: Tên chương trình thực thi ngay sau khi đăng nhập. Nếu không có shell sẽ không thể đăng nhập.Mặc định trên Linux dùng bash shell.</li>
 </ul>
 
 - Dòng đầu tiên của /etc/passwd mô tả thông tin cho user root( tất cả những tài khoản có User ID = 0 đều là root), Tieespp theo là các tải khoản khác của hệ thống, cuối cùng là các tài khoản của người dùng.
@@ -75,15 +75,15 @@ Mỗi tài khoản người dùng phải có một tên sử dụng (username) v
 
 - Các dòng tương ứng với mỗi tài khoản, các cột cách nhau bởi dấu ":"
 <ul>
-<li>Cột 1: Tên của tài khoản.</li>
-<li>Cột 2: Mật khẩu của tài khoản được mã hóa. Trong trường hợp tài khoản nào có mật khẩu là ! tức là tài khoản đang tạm thời bị khó, * là tài khoản bị disable.</li>
-<li>Cột 3: Số ngày kể từ khi mật khẩu được thay đổi cuối cùng(Mặc định chưa thay mật khẩu 1-1-1970)</li>
-<li>Cột 4: Số ngày tối thiểu để có thể thay được mật khẩu.</li>
-<li>Cột 5: Số ngày mật khẩu hết hạn.</li>
-<li>Cột 6: Số ngày cảnh báo ngời dùng phải thay đổi mật khẩu trước khi hết hạn.</li>
-<li>Cột 7: Số ngày sau khi mật khẩu hết hạn, thì tài khoản bị disable.</li>
-<li>Cột 8: Số ngày ể từ ngày 1-1-1970 tài khoản bị vô hiệu hóa.</li>
-<li>Cột 9: Một lĩnh vực riêng dùng trong tương lai.</li>
+<li>Tên của tài khoản.</li>
+<li>Mật khẩu của tài khoản được mã hóa. Trong trường hợp tài khoản nào có mật khẩu là ! tức là tài khoản đang tạm thời bị khó, * là tài khoản bị disable.</li>
+<li>Số ngày kể từ khi mật khẩu được thay đổi cuối cùng(Mặc định chưa thay mật khẩu 1-1-1970)</li>
+<li>Số ngày tối thiểu để có thể thay được mật khẩu.</li>
+<li>Số ngày mật khẩu hết hạn.</li>
+<li>Số ngày cảnh báo ngời dùng phải thay đổi mật khẩu trước khi hết hạn.</li>
+<li>Số ngày sau khi mật khẩu hết hạn, thì tài khoản bị disable.</li>
+<li>Số ngày ể từ ngày 1-1-1970 tài khoản bị vô hiệu hóa.</li>
+<li>Một lĩnh vực riêng dùng trong tương lai.</li>
 </ul>
 
 - Ký tự $ trước mật khẩu đã được mã hóa của người dùng cho biết mật khẩu này được tạo sử dụng một thuật toán mã hóa:
